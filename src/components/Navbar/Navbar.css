@@ -1,0 +1,34 @@
+.navbar {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 18px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    list-style-type: none;
+}
+
+.link {
+    height: 100%;
+    margin: 0 20px;
+    transition: ease-in .2s;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.active {
+    color: #0494F7;
+    border-bottom: 3px solid #0494F7;
+}
+
+.link:hover {
+    color: #0494F7;
+    border-bottom: 3px solid #0494F7;
+}

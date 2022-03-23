@@ -1,13 +1,12 @@
 import React from 'react'
-import Home from '../Home/Home';
 import Navbar from '../Navbar/Navbar';
 import './layout.css';
 
-const Layout = () => {
+const Layout = (props: any) => {
     return (
         <div className="container">
             <Navbar />
-            <Home />
+            { props.children}
         </div>
     )
 }
