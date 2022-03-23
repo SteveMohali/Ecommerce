@@ -1,0 +1,31 @@
+.modal {
+    background: rgba(2, 2, 2, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+}
+
+.innerDiv {
+    width: 800px;
+    height: 400px;
+    background: white;
+    position: relative;
+}
+
+.clostBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    width: 30px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 30px;
+    border-radius: 50%;
+}

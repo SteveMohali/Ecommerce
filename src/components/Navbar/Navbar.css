@@ -1,34 +1,112 @@
 .navbar {
-    margin-bottom: 25px;
-    margin-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
     font-size: 18px;
 }
 
-.links {
-    display: flex;
-    justify-content: flex-end;
-    width: 70%;
-    list-style-type: none;
+nav ul {
+    list-style: none;
+    text-align: center;
 }
 
-.link {
-    height: 100%;
-    margin: 0 20px;
-    transition: ease-in .2s;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
+nav ul li {
+    display: inline-block;
 }
 
-.active {
-    color: #0494F7;
-    border-bottom: 3px solid #0494F7;
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+    color: black;
 }
 
-.link:hover {
-    color: #0494F7;
-    border-bottom: 3px solid #0494F7;
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .3s;
+}
+
+nav ul li a:hover {
+    color: #0390E8;
+}
+
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #0390E8;
+    height: 2px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+nav.fill ul li a {
+    transition: all 1s;
+}
+
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill .4s forwards;
+    -moz-animation: fill .4s forwards;
+    opacity: 1;
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: #0390E8;
+    }
+}
+
+@-webkit-keyframes fill {
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: #0390E8;
+    }
 }

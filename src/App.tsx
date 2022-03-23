@@ -1,17 +1,18 @@
-import React from 'react';
-import './App.css';
-import Layout from './components/Layout/Layout';
-import Loader from './components/Common/Loader/Loader';
-import Home from './components/Home/Home';
-
+import React from "react";
+import "./App.css";
+import Layout from "./components/Layout/Layout";
+import Home from "./components/Home/Home";
+import { Toast } from "./Common/Toast/Toast";
+import Modal from "./Common/Modal/Modal";
 function App() {
   return (
-   <div>
-     <Loader />
-     <Layout> 
-       <Home />
-     </Layout>
-   </div>
+    <div>
+      <Layout>
+        <Modal />
+        <Home />
+        <Toast type="success" message="Success" />
+      </Layout>
+    </div>
   );
 }
 
