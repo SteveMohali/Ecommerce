@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+
+//@ts-ignore
+import Logo from '../../assets/images/Icon.png';
+
 import './Navbar.css'
 
 const Navbar = () => {
     return (
         <nav className="navbar fill">
-            <div className="logo">Logo</div>
+            <div className="logo"><img src={Logo} alt="logo" width={140}/></div>
             <ul className="links">
                 <li className="link active"><a href="#">Products</a></li>
                 <li className="link"><a href="#">Orders</a></li>
